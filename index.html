@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="./src/scss/style.css" />
-    <link rel="icon" href="./src/images/logo.jpg" />
 
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="game-section">
-      <div class="game-control">
-        <div class="new-game">NEW GAME</div>
-        <div class="reset-game">RESET GAME</div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="./src/scss/style.css" />
+  <link rel="icon" href="./src/images/logo.jpg" />
 
-      <div class="score-board">
-        <div class="score-window">
-          <p class="score-x">
-            <img src="./src/images/x.gif" alt="" />
-            <span> 0 </span>
-          </p>
-        </div>
-        <div class="score-window">
-          <p class="score-o">
-            <img src="./src/images/0.gif" alt="o" />
-            <span> 0 </span>
-          </p>
-        </div>
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <section class="game-section">
+    <div class="game-control">
+      <div class="winner-block">
+        <p class="winner-info">PLAYER WINNER!</p>
+        <p class="close-btn">X</p>
+        <audio id="winSound" src="./src/audio/winner.mp3" preload="auto"></audio>
       </div>
-      <div class="game-board">
-        <div class="board-item" data-item="0"></div>
-        <div class="board-item" data-item="1"></div>
-        <div class="board-item" data-item="2"></div>
-        <div class="board-item" data-item="3"></div>
-        <div class="board-item" data-item="4"></div>
-        <div class="board-item" data-item="5"></div>
-        <div class="board-item" data-item="6"></div>
-        <div class="board-item" data-item="7"></div>
-        <div class="board-item" data-item="8"></div>
+      <div class="options new-game">NEW GAME</div>
+      <div class="options reset-game">RESET GAME</div>
+    </div>
+
+    <div class="score-board">
+      <div class="score-window">
+        <p class="score-x">
+          <img src="./src/images/x.gif" alt="" />
+          <span> 0 </span>
+        </p>
       </div>
-    </section>
-  </body>
-  <script type="module" src="./src/js/app.js"></script>
+      <div class="score-window">
+        <p class="score-o">
+          <img src="./src/images/0.gif" alt="o" />
+          <span> 0 </span>
+        </p>
+      </div>
+    </div>
+    <div class="game-board">
+      <div class="board-item" data-item="0"></div>
+      <div class="board-item" data-item="1"></div>
+      <div class="board-item" data-item="2"></div>
+      <div class="board-item" data-item="3"></div>
+      <div class="board-item" data-item="4"></div>
+      <div class="board-item" data-item="5"></div>
+      <div class="board-item" data-item="6"></div>
+      <div class="board-item" data-item="7"></div>
+      <div class="board-item" data-item="8"></div>
+    </div>
+  </section>
+</body>
+<script type="module" src="./src/js/app.js"></script>
+
 </html>
